@@ -1,0 +1,51 @@
+﻿@model LibraryApp.Models.Book
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="Edit" asp-controller="Books" method="post">
+            <div class="form-group">
+                <label asp-for="BookName"></label>
+                <input asp-for="BookName" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Author"></label>
+                <input asp-for="Author" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ISBN"></label>
+                <input asp-for="ISBN" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Genre"></label>
+                <select asp-for="Genre" class="form-control">
+                    <option disabled selected>--SELECT--</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Comic">Comic</option>
+
+                </select>
+
+
+            </div>
+            <div class="form-group">
+                <label asp-for="PublishedDate"></label>
+                <input asp-for="PublishedDate" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Edit </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -67,6 +67,9 @@ namespace LibraryApp.Controllers
             _bookRepos.DeleteBook(Id);
             return RedirectToAction("Index", "Books");
         }
-      
+      public IActionResult New()
+        {
+            return View();
+        }
     }
 }
